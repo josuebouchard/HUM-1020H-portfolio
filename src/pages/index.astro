@@ -1,0 +1,162 @@
+---
+import Layout from "../layouts/Layout.astro";
+import WorkCard from "../components/WorkCard.astro";
+
+import { Image } from "astro:assets";
+import meImage from "../assets/me.jpg";
+---
+
+<Layout title="HUM-1020H portfolio">
+	<!-- Intro -->
+	<div class="h-screen w-full">
+		<span
+			class="text-5xl font-semibold leading-tight
+		relative top-[15%] left-[10%]"
+		>
+			Welcome to<br />
+			<span
+				class="font-light italic underline underline-offset-2 decoration-orange-600"
+			>
+				Josué Bouchard's
+			</span><br />
+			<span class="text-blue-500">HUM-1020H</span><br />
+			portfolio
+		</span>
+	</div>
+
+	<!-- Presentation slide -->
+	<div id="presentation" class="bg-blue-500 text-white min-h-screen w-full">
+		<!-- Container -->
+		<div class="flex flex-col items-center px-6 py-10 w-full">
+			<h1 class="text-5xl font-bold">Who am I? What's this?</h1>
+			<div class="avatar my-10">
+				<div class="max-w-64 rounded">
+					<Image src={meImage} alt="Josue Bouchard" />
+				</div>
+			</div>
+			<div class="max-w-screen-xl text-xl flex flex-col gap-6">
+				<p class="text-2xl font-semibold">
+					Hi! My name is Josué Bouchard, and in Spring 2024 I was part
+					of Ms. Woldman's
+					<strong> "Introduction to Humanities Honors" </strong>
+					(HUM-1020H) class.
+				</p>
+
+				<p>
+					I'm a Computer Science student, currently pursuing my A.A.
+					in Honors. In an attempt to reconcile programming and the
+					humanities, I decided to code this whole portfolio.
+				</p>
+
+				<p>
+					The purpose of this portfolio is to summarize all the
+					projects I made in this course, alongside a small
+					description of what I learned with each project.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- Projects slide -->
+	<div id="my-works" class="bg-purple-500 text-white min-h-screen w-full">
+		<!-- Container -->
+		<div class="flex flex-col items-center px-6 py-10 w-full">
+			<div class="flex flex-col gap-3 items-center">
+				<h1 class="text-5xl font-bold">My works</h1>
+				<p class="text-xl">
+					For this class, we were required to participate in
+					<em>eight</em>
+					<span
+						class="underline decoration-red-500 decoration-4 underline-offset-4"
+					>
+						original projects
+					</span>
+					with the topic <strong>GET OUT</strong>.
+				</p>
+			</div>
+
+			<!-- Cards -->
+			<div
+				class="grid grid-rows-8 xl:grid-rows-4 grid-flow-col w-full gap-3 mt-10"
+			>
+				<WorkCard
+					index={1}
+					title="Sculpture"
+					colorClass="bg-blue-500"
+					slug="sculpture"
+				/>
+				<WorkCard
+					index={2}
+					title="Historical-inspired Play"
+					colorClass="bg-orange-500"
+					slug="historical-inspired-play"
+				/>
+				<WorkCard
+					index={3}
+					title="Cross-cultural Experience"
+					colorClass="bg-yellow-500"
+					slug="cross-cultural-experience"
+				/>
+				<WorkCard
+					index={4}
+					title="Visual Art"
+					colorClass="bg-red-800"
+					slug="visual-art"
+				/>
+				<WorkCard
+					index={5}
+					title="Song"
+					colorClass="bg-green-500"
+					slug="song"
+				/>
+				<WorkCard
+					index={6}
+					title="Personal Manifesto"
+					colorClass="bg-red-500"
+					slug="personal-manifesto"
+				/>
+
+				<WorkCard
+					index={7}
+					title="Student-led Discussion"
+					colorClass="bg-pink-500"
+					slug="student-led-discussion"
+				/>
+				<WorkCard
+					index={8}
+					title="Field Experience"
+					colorClass="bg-teal-500"
+					slug="field-experience"
+				/>
+			</div>
+		</div>
+	</div>
+
+	<!-- Final project -->
+	<div id="my-works" class="bg-orange-400 text-white min-h-screen w-full">
+		<!-- Container -->
+		<div class="flex flex-col items-center px-6 py-10 w-full gap-6">
+			<h1 class="text-5xl font-bold">
+				The final project - A general reflection
+			</h1>
+			<div class="max-w-screen-xl text-xl flex flex-col gap-6">
+				<p class="text-xl">
+					As a final project, I was asked to make a final reflection
+					on:
+
+					<ul class="list-disc">
+						<li>What has the making of this portfolio taught me</li>
+						<li>What have I learned about humanities in general</li>
+						<li>Our topic <strong>Get Out</strong>!</li>
+						<li>My strenghts and weaknesses</li>
+						<li>Areas you would like to explore further</li>
+					</ul>
+				</p>
+
+				<a href="/projects/final-reflection" class="btn btn-primary"
+					>Click here to read my reflection</a
+				>
+			</div>
+		</div>
+	</div>
+</Layout>
