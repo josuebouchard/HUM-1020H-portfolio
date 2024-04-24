@@ -4,6 +4,7 @@ import WorkCard from "../components/WorkCard.astro";
 
 import { Image } from "astro:assets";
 import meImage from "../assets/me.jpg";
+import githubLogo from "../assets/github-logo.svg";
 ---
 
 <Layout title="HUM-1020H portfolio">
@@ -45,7 +46,19 @@ import meImage from "../assets/me.jpg";
 				<p>
 					I'm a Computer Science student, currently pursuing my A.A.
 					in Honors. In an attempt to reconcile programming and the
-					humanities, I decided to code this whole portfolio.
+					humanities, I decided to code this whole portfolio. All the
+					code can be found in
+					<Image
+						src={githubLogo}
+						alt="github-logo"
+						class="inline w-5"
+					/>
+					<a
+						href="https://github.com/josuebouchard/HUM-1020H-portfolio"
+						class="link"
+					>
+						my github repo.
+					</a>
 				</p>
 
 				<p>
