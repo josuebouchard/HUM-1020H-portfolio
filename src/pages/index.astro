@@ -5,6 +5,8 @@ import WorkCard from "../components/WorkCard.astro";
 import { Image } from "astro:assets";
 import meImage from "../assets/me.jpg";
 import githubLogo from "../assets/github-logo.svg";
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <Layout title="HUM-1020H portfolio">
@@ -160,7 +162,7 @@ import githubLogo from "../assets/github-logo.svg";
           </ul>
         </p>
 
-        <a href="/projects/final-reflection" class="btn btn-primary"
+        <a href=`${base}/projects/final-reflection` class="btn btn-primary"
           >Click here to read my reflection</a
         >
       </div>
