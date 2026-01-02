@@ -1,19 +1,20 @@
 ---
 import Layout from "./Layout.astro";
 const { frontmatter } = Astro.props;
+const base = import.meta.env.BASE_URL;
 ---
 
 <Layout title={frontmatter.title}>
-    <div class="container prose mx-auto w-full pb-20 gap-8">
-        <article class="flex flex-col w-full">
-            <h1 transition:name={frontmatter.slug}>{frontmatter.title}</h1>
-            <slot />
-        </article>
+  <div class="container prose mx-auto w-full pb-20 gap-8">
+    <article class="flex flex-col w-full">
+      <h1 transition:name={frontmatter.slug}>{frontmatter.title}</h1>
+      <slot />
+    </article>
 
-        <hr/>
+    <hr />
 
-        <a href="/#my-works" class="btn btn-primary text-white w-full">
-            See some other projects of mine
-        </a>
-    </div>
+    <a href=`${base}/#my-works` class="btn btn-primary text-white w-full">
+      See some other projects of mine
+    </a>
+  </div>
 </Layout>

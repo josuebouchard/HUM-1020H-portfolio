@@ -3,6 +3,7 @@ layout: ../../layouts/MdxLayout.astro
 slug: historical-inspired-play
 title: Historical Inspired Play
 ---
+export const base = import.meta.env.BASE_URL;
 
 <iframe width="720" height="405"
     src="https://www.youtube.com/embed/I-A8IO5Sqmo" title="12th night group"
@@ -13,7 +14,7 @@ title: Historical Inspired Play
     class="self-center my-3"
 />
 
-<a href="https://docs.google.com/document/d/1k1eoO2LNtuZsIDjZ3rsIYbbfORX1dOVLAjc0Tyip438/edit?usp=sharing"
+<a href={`${base}/projects/historical-inspired-play-script.pdf`}
 class="btn btn-outline btn-info">Click here to see the script</a>
 
 For this project, we've been tasked to read William Shakespeare's "Twelfth Night", and create an adaptation as if it were a modern comedy, while still retaining some aspects of the original story. We decided to remake one of the final scenes of the book in something like a sitcom.

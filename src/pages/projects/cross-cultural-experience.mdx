@@ -3,8 +3,9 @@ layout: ../../layouts/MdxLayout.astro
 slug: cross-cultural-experience
 title: Cross-cultural Experience
 ---
+export const base = import.meta.env.BASE_URL;
 
-<a href="/projects/cross-cultural-religious-experience.pdf"
+<a href={`${base}/projects/cross-cultural-religious-experience.pdf`}
 class="btn btn-outline btn-info">
 Click here to see a my outcomes from the cross cultural experience
 </a>

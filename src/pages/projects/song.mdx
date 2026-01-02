@@ -4,8 +4,8 @@ slug: song
 title: Original Song
 ---
 import { Image } from "astro:assets";
-
 import song from "../../assets/original-song/original-song.mp3";
+export const base = import.meta.env.BASE_URL;
 
 For this project we had to create an original song. This is my original song, **Staying Afloat**.
 
@@ -18,7 +18,7 @@ scratch.
 
 I wrote the scoresheet in Musescore 4, and then exported the music.
 
-<a href="/projects/original-song-scoresheet.pdf" class="btn btn-outline btn-info">
+<a href={`${base}/projects/original-song-scoresheet.pdf`} class="btn btn-outline btn-info">
 Click here to see the scoresheet
 </a>
 

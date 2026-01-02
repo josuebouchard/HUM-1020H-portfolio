@@ -6,6 +6,7 @@ title: Original Sculpture
 import { Image } from "astro:assets";
 import finalImage from "../../assets/sculpture/04-final.jpeg"
 import workInProgressImage from "../../assets/sculpture/01-wip.jpeg"
+export const base = import.meta.env.BASE_URL;
 
 <Image src={finalImage} alt="finalized project" class="max-w-[80vmin] self-center" />
 

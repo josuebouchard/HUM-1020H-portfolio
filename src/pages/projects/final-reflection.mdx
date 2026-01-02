@@ -3,8 +3,9 @@ layout: ../../layouts/MdxLayout.astro
 slug: final-reflection
 title: Final Reflection
 ---
+export const base = import.meta.env.BASE_URL;
 
-<a href="/projects/final-reflection.pdf" class="btn btn-outline btn-info">
+<a href={`${base}/projects/final-reflection.pdf`} class="btn btn-outline btn-info">
 Click here to see the PDF version of the reflection
 </a>
 
